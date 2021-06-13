@@ -27,11 +27,16 @@ function changeCity(event) {
   let endPoint = `https://api.openweathermap.org/data/2.5/weather?`;
   let cityInput = document.querySelector("#city-input");
   let tittle = document.querySelector("#city");
+
   tittle.innerHTML = cityInput.value;
 
   function showTemperature(response) {
     let temp = Math.round(response.data.main.temp);
+
+    let description = response.data.weather[0].description;
+
     document.querySelector("#temperature").innerHTML = temp;
+    document.querySelector("#description").innerHTML = description;
   }
 
   axios
