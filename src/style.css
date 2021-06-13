@@ -35,6 +35,10 @@ ul {
   list-style: none;
   text-transform: capitalize;
 }
+
+li {
+  text-transform: capitalize;
+}
 a {
   text-decoration: none;
 }
