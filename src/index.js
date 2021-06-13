@@ -64,7 +64,7 @@ function convertC(event) {
   let cityInput = document.querySelector("#city-input");
   let temperatureElement = document.querySelector("#temperature");
 
-  temperatureElement.innerHTML = celsiusTemperature);
+  temperatureElement.innerHTML = celsiusTemperature;
 }
 
 function convertF(event) {
