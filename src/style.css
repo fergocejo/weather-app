@@ -84,3 +84,7 @@ a {
   display: block !important;
   text-align: center;
 }
+
+.active {
+  color: black;
+}
