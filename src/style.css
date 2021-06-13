@@ -46,6 +46,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  color: black;
 }
 .firstlist {
   list-style: none;
