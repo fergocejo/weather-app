@@ -64,6 +64,7 @@ function convertC(event) {
   let cityInput = document.querySelector("#city-input");
   let temperatureElement = document.querySelector("#temperature");
   farenheit.classList.add("active");
+  celsius.classList.remove("active");
   temperatureElement.innerHTML = celsiusTemperature;
 }
 
@@ -71,6 +72,7 @@ function convertF(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   celsius.classList.remove("active");
+  farenheit.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature * (9 / 5) + 32);
 }
 
