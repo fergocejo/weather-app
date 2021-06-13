@@ -43,6 +43,10 @@ li {
 a {
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: none;
+}
 .firstlist {
   list-style: none;
   padding: 0;
