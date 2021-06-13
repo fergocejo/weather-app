@@ -87,4 +87,9 @@ a {
 
 .active {
   color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
