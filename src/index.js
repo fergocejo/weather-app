@@ -34,9 +34,11 @@ function changeCity(event) {
     let temp = Math.round(response.data.main.temp);
 
     let description = response.data.weather[0].description;
+    let humidityelement = response.data.main.humidity;
 
     document.querySelector("#temperature").innerHTML = temp;
     document.querySelector("#description").innerHTML = description;
+    document.querySelector("#humidity").innerHTML = humidityelement;
   }
 
   axios
