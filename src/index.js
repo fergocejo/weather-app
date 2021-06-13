@@ -82,7 +82,13 @@ function showCurrent(response) {
   document.querySelector("h1").innerHTML = `${response.data.name}`;
   console.log(response.data);
   let temp = Math.round(response.data.main.temp);
+  let description = response.data.weather[0].description;
+  let humidityelement = response.data.main.humidity;
+  let windelement = response.data.wind.speed;
   document.querySelector("#temperature").innerHTML = temp;
+  document.querySelector("#description").innerHTML = description;
+  document.querySelector("#humidity").innerHTML = humidityelement;
+  document.querySelector("#wind").innerHTML = windelement;
 }
 
 function getCurrentPosition() {
