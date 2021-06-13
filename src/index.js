@@ -35,10 +35,11 @@ function changeCity(event) {
 
     let description = response.data.weather[0].description;
     let humidityelement = response.data.main.humidity;
-
+    let windelement = response.data.wind.speed;
     document.querySelector("#temperature").innerHTML = temp;
     document.querySelector("#description").innerHTML = description;
     document.querySelector("#humidity").innerHTML = humidityelement;
+    document.querySelector("#wind").innerHTML = windelement;
   }
 
   axios
