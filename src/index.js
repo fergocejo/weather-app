@@ -1,3 +1,4 @@
+getCurrentPosition();
 function changeDay(date) {
   let days = [
     "Sunday",
