@@ -38,6 +38,8 @@ function changeCity(event) {
     let humidityelement = response.data.main.humidity;
     let windelement = response.data.wind.speed;
     let iconElement = document.querySelector("#icon");
+    celsiusTemperature = Math.round(response.data.main.temp);
+
     document.querySelector("#temperature").innerHTML = temp;
     document.querySelector("#description").innerHTML = description;
     document.querySelector("#humidity").innerHTML = humidityelement;
@@ -68,8 +70,8 @@ function convertC(event) {
 function convertF(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let temperatureC = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round(temperatureC * (9 / 5) + 32);
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature * (9 / 5) + 32);
 }
 
 function showPosition(position) {
@@ -94,6 +96,7 @@ function showCurrent(response) {
   let humidityelement = response.data.main.humidity;
   let windelement = response.data.wind.speed;
   let iconElement = document.querySelector("#icon");
+  celsiusTemperature = Math.round(response.data.main.temp);
   document.querySelector("#temperature").innerHTML = temp;
   document.querySelector("#description").innerHTML = description;
   document.querySelector("#humidity").innerHTML = humidityelement;
@@ -116,6 +119,8 @@ newDay.innerHTML = changeDay(currentTime);
 
 let citySearch = document.querySelector("form");
 citySearch.addEventListener("submit", changeCity);
+
+let celsiusTemperature = null;
 
 let celsius = document.querySelector("#c");
 celsius.addEventListener("click", convertC);
