@@ -63,8 +63,8 @@ function convertC(event) {
   let endPoint = `https://api.openweathermap.org/data/2.5/weather?`;
   let cityInput = document.querySelector("#city-input");
   let temperatureElement = document.querySelector("#temperature");
-  let temperatureF = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round((temperatureF - 32) * (5 / 9));
+
+  temperatureElement.innerHTML = celsiusTemperature);
 }
 
 function convertF(event) {
