@@ -86,10 +86,17 @@ function showCurrent(response) {
   let description = response.data.weather[0].description;
   let humidityelement = response.data.main.humidity;
   let windelement = response.data.wind.speed;
+  let iconElement = response.data.weathet[0].icon;
   document.querySelector("#temperature").innerHTML = temp;
   document.querySelector("#description").innerHTML = description;
   document.querySelector("#humidity").innerHTML = humidityelement;
   document.querySelector("#wind").innerHTML = windelement;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${iconElement}@2x.png`
+    );
 }
 
 function getCurrentPosition() {
