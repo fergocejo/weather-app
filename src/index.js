@@ -130,6 +130,8 @@ function showCurrent(response) {
 
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
+  let cityInput = document.querySelector("#city-input");
+  cityInput.value = "";
 }
 
 function displayForecast(response) {
